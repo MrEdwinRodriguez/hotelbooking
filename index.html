@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hotel Booking">
+    <meta name="author" content="Edwin Rodriguez">
+    <title>Hotel Booking</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<h1>ACME Hotel Booking</h1>
+<br>
+<br>
+
+<div class='locationSelector'>
+<p><b>Location</b></p>
+    <form action="demo_form.asp" method="get">
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="New York">
+                <option value="Boston">
+                    <option value="Las Vegas">
+                        <option value="Chicago">
+                            <option value="Orlando">
+        </datalist>
+        <input type="submit">
+    </form>
+</div>
+<br>
+<div class='container'>
+    <div class="row">
+        <div class="col-md-4">
+            <p><b>Check In Date:</b></p>
+            <input type="text" name="date" placeholder="DD.MM.YYYY" />
+            <br/>
+            <br/>
+        </div>
+        <div class="col-md-4">
+            <p><b>Check Out Date:</b></p>
+            <input type="text" name="date" placeholder="DD.MM.YYYY" />
+            <br/>
+            <br/>
+        </div>
+        <div class="col-md-4">
+        	<p><b>Rooms:</b></p>
+            <select>
+                <option value=1 >1</option>
+                <option value=2 >2</option>
+                <option value=3 >3</option>
+                <option value=4 >4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<body>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+    </script>
+</body>
