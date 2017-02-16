@@ -18,10 +18,20 @@ function getLocation(place) {
             var cityChoices = response._embedded['city:search-results'][i].matching_alternate_names[0].name;
             // return
             console.log(cityChoices)
+            showList(cityChoices);
         }
 
     });
 }
+
+function showList(city) {
+    var x = document.getElementById("listCities");
+    var option = document.createElement("option");
+    option.text = city;
+    x.add(option);
+}
+
+
 
 $(document).ready(function() {
 
