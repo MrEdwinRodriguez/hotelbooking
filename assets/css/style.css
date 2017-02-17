@@ -1,3 +1,8 @@
 .locationSelector{
 	margin-left: 30px;
 }
+
+#listCities{
+	visibility: hidden;
+	margin-left: 70px;
+}
