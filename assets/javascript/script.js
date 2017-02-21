@@ -1,41 +1,36 @@
+function checkin() {
 
-function checkin(){
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
 
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
- if(dd<10){
-        dd='0'+dd
-    } 
-    if(mm<10){
-        mm='0'+mm
-    } 
 
-today = yyyy+'-'+mm+'-'+dd;
-document.getElementById("datefieldIn").setAttribute("min", today);
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("datefieldIn").setAttribute("min", today);
+
+
 }
 
-function checkOut(){
 
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
- if(dd<10){
-        dd='0'+dd
-    } 
-    if(mm<10){
-        mm='0'+mm
-    } 
 
-today = yyyy+'-'+mm+'-'+dd;
-document.getElementById("datefieldOut").setAttribute("min", today);
+
+function checkOut() {
+    // gets value of input
+    var currentPick = document.getElementById("datefieldIn").value;
+  
+    //sets min date equal to input 
+    document.getElementById("datefieldOut").setAttribute("min", currentPick);
 }
 
 
 checkin();
-checkOut();
 
 
 
@@ -92,5 +87,3 @@ $(document).ready(function() {
         return false;
     });
 });
-
-
