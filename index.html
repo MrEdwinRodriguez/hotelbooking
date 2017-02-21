@@ -16,29 +16,27 @@
         <!-- Label for Text Box -->
         <label for="location">Location:</label>
         <!-- Text Input Box -->
-        <input type="text" id="location">
-        <br>
-        	<!-- <div id="listCities"></div> -->
-            <select id="listCities" size="8">
-   
-            </select>
+        <input type="text" id="location">    
+            <!-- <select id="listCities" size="8"></select> -->
         
         <!-- Submit Button -->
         <input id="selectLocation" type="submit" value="GO!">
+        <br>
+        <select id="listCities" size="8"></select>
     </form>
 </div>
-<br>
+
 <div class='container'>
     <div class="row">
         <div class="col-md-4">
             <h3><b>Check In Date:</b></h3>
-            <input type="text" name="date" placeholder="DD/MM/YYYY" />
+            <input id="datefieldIn" type='date' min='2017-01-01' max='2000-13-13'></input>
             <br/>
             <br/>
         </div>
         <div class="col-md-4">
             <h3><b>Check Out Date:</b></h3>
-            <input type="text" name="date" placeholder="DD.MM.YYYY" />
+            <input id="datefieldOut" type='date' min='2017-01-01' max='2000-13-13'></input>
             <br/>
             <br/>
         </div>

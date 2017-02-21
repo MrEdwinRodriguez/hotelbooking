@@ -1,3 +1,44 @@
+
+function checkin(){
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("datefieldIn").setAttribute("min", today);
+}
+
+function checkOut(){
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("datefieldOut").setAttribute("min", today);
+}
+
+
+checkin();
+checkOut();
+
+
+
 function getLocation(place) {
 
     // Run an initial search to identify the artist unique Spotify ID
@@ -13,20 +54,8 @@ function getLocation(place) {
         var responseArray = response._embedded['city:search-results']
         var responseArrayLength = responseArray.length;
 
-        // var q = document.getElementById("listCities");
-        // var x = document.createElement("SELECT");
-        // x.setAttribute("id", "mySelect");
-        // //document.body.appendChild(x);
-        // q.add(x)
 
-        // var z = document.createElement("option");
-        // z.setAttribute("value", "volvocar");
-        // var t = document.createTextNode("Volvo");
-        // z.appendChild(t);
-        // document.getElementById("mySelect").appendChild(z);
-
-
-document.getElementById("listCities").style.visibility = "visible"
+        document.getElementById("listCities").style.visibility = "visible"
 
         for (i = 0; i < responseArrayLength; i++) {
             console.log('hello')
@@ -53,6 +82,7 @@ $(document).ready(function() {
     $('#selectLocation').on('click', function() {
         // $('#selectLocation').keyup(function() {
         // Grab the location
+        $('#listCities').empty();
         var location = $('#location').val().trim();
         console.log(location);
 
@@ -62,3 +92,5 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
